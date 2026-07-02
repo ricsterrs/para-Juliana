@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="pantalla-1" class="pantalla activa">
+        <div class="tarjeta">
+            <p>Hola Juli ❤️ </p>
+            <p>No sabía cuál era la mejor forma de decirte todo esto lo que estoy sintiendo por ti</p>
+            <p>Así que decidí hacerlo de una forma diferente.</p>
+            <button onclick="cambiarPantalla(1, 2)"> Abrir la carta</button>
+        </div>
+    </section>
+
+    <section id="pantalla-2" class="pantalla oculta">
+        <div class="tarjeta carta-elegante">
+            <p id="texto-maquina"></p>
+            <button id="btn-continuar-2" class="oculto" onclick="cambiarPantalla(2, 3)">Continuar</button>
+        </div>
+    </section>
+
+    <section id="pantalla-3" class="pantalla oculta">
+        <h2>Juli no se que me pasa con esta canción... 🎶</h2>
+        <div class="tarjeta">
+            <p>Pero esta canción me hace pensar demasiado en ti y ya por eso no puedo sacarte de mi mente...</p>
+            <div class="video-container">
+                <iframe width="100%" height="250" src="https://youtu.be/kQKGI24aydk?si=eIU-7mcW_NYLbeKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <button onclick="cambiarPantalla(3, 4)">Continuar</button>
+        </div>
+    </section>
+
+    <section id="pantalla-4" class="pantalla oculta">
+        <h2>En esta parte estan algunas de muchas cosas que me gustan de ti...</h2>
+        <div class="grid-tarjetas">
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu sonrisa</div><div class="tarjeta-dorso"> Juli siempre que sonries consigues mejorar mi día, me parece preciosa.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu humor</div><div class="tarjeta-dorso">Aunque sea una bobada siempre me logras sacar una sonrisa.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu forma de ser</div><div class="tarjeta-dorso">Amor es una de las cosas que más admiro.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tus golpes en el pecho</div><div class="tarjeta-dorso">No entiendo por qué te gusta pegarme... pero me encanta, es la forma más linda en como expresas tus sentimientos</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu personalidad</div><div class="tarjeta-dorso">Amor es imposible aburrirme contigo,eres unica.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tus ojos</div><div class="tarjeta-dorso">Amor tus ojos odría mirarlos todo el día sin cansarme.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu culote</div><div class="tarjeta-dorso">Me parece lo más hermoso que he visto, me encanta tocarlo y admirarlo.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tus besos</div><div class="tarjeta-dorso">Me encanta cuando lo haces sin decirtelo, eso me enamora más de ti.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tus tetas</div><div class="tarjeta-dorso">Son tan lindas que yo las chuparia dia y noche</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu locura</div><div class="tarjeta-dorso">Combina perfectamente con la mía.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente">Tu compañía</div><div class="tarjeta-dorso">Haces que cualquier momento sea especial.</div></div></div>
+            <div class="tarjeta-giratoria" onclick="girarTarjeta(this)"><div class="tarjeta-inner"><div class="tarjeta-frente"> Tú ❤️</div><div class="tarjeta-dorso">Creo que eres el complemento perfecto para mi vida.</div></div></div>
+        </div>
+        <button id="btn-continuar-4" class="oculto" onclick="cambiarPantalla(4, 5)">Continuar</button>
+    </section>
+    
+   <section id="pantalla-5" class="pantalla oculta">
+        <h2>Son pocas fotos pero son recuerdos que son lindos recordar ❤️(toca las fotos)</h2>
+        <div class="galeria">
+            <div class="foto-tarjeta" onclick="abrirModal('foto1.jpg', 'Ese día aunque fuera simple y tranquilo, senti mucha cercania y tranquilidad, me diste la seguridad de que estaba con la mujer perfecta ❤️')">
+                <img src="foto1.jpg" alt="Recuerdo 1" class="img-galeria">
+                <p class="foto-pie">Un día especial...</p>
+            </div>
+            
+            <div class="foto-tarjeta" onclick="abrirModal('foto2.jpg', 'Este dia fui el hombre más feliz por que tu fuiste la mujer más feliz del mundo')">
+                <img src="foto2.jpg" alt="Recuerdo 2" class="img-galeria">
+                <p class="foto-pie">Tus primeras rosas</p>
+            </div>
+            
+            <div class="foto-tarjeta" onclick="abrirModal('foto3.jpg', 'No importa el plan, cualquier amanecer contigo se convierte en mi momento favorito de la semana. Esta foto me encanta porque muestra tu esencia tal como es: natural, auténtica y hermosa.')">
+                <img src="foto3.jpg" alt="Recuerdo 3" class="img-galeria">
+                <p class="foto-pie">Un amanecer cualquiera...</p>
+            </div>
+        </div>
+        
+        <div id="modal-foto" class="modal oculto-elemento" onclick="cerrarModal()" style="cursor: pointer;">
+            <div class="modal-contenido">
+                <span class="cerrar">&times;</span>
+                <img id="img-modal" src="" alt="Recuerdo ampliado" class="img-modal-grande">
+                <p id="modal-texto"></p>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">(Toca cualquier parte para cerrar)</p>
+            </div>
+        </div>
+        <button class="btn-siguiente" onclick="cambiarPantalla(5, 6)">Continua algo que te gusta mucho hacer</button>
+    </section>
+
+    <section id="pantalla-6" class="pantalla oculta">
+        <h2>Juli no se por que te gusta pegarme en el pecho, pero me encanta tu forma de expresar tu amor ❤️</h2>
+        <div class="ui-juego">
+            <span>❤️ Amor</span>
+            <div class="barra-fondo">
+                <div id="barra-amor" class="barra-relleno"></div>
+            </div>
+            <span id="porcentaje-amor">0%</span>
+        </div>
+        
+        <div id="personaje" class="personaje-juego" onclick="darGolpe()">
+            <img id="img-personaje" src="personaje_normal.png" alt="Personaje" draggable="false">
+        </div>
+        
+        <p id="mensaje-juego" class="mensaje-juego">¡Golpéame!</p>
+        <button id="btn-continuar-6" class="oculto" onclick="cambiarPantalla(6, 7)">Continuar</button>
+    </section>
+
+    <section id="pantalla-7" class="pantalla oculta">
+        <h2>Encuentra los corazones</h2>
+        <p style="margin-bottom: 15px;">Atrapa 10 corazones rojos (❤️). ¡Cuidado con los demás!</p>
+        
+        <div class="ui-juego">
+            <span>Progreso:</span>
+            <span id="contador-corazones" style="font-weight: 600; color: #d47683; font-size: 1.2rem;">0 / 10</span>
+        </div>
+
+        <div id="contenedor-corazones" class="area-juego"></div>
+
+        <p id="mensaje-juego-7" class="mensaje-juego"></p>
+        <button id="btn-continuar-7" class="oculto" onclick="cambiarPantalla(7, 8)">Continuar </button>
+    </section>
+
+    <section id="pantalla-8" class="pantalla oculta">
+        <h2>¿Cuánto conoces de nosotros y de mi? </h2>
+        <div class="tarjeta trivia-tarjeta">
+            <div class="progreso-trivia">Pregunta <span id="num-pregunta">1</span> de 3</div>
+            <h3 id="pregunta-texto"></h3>
+            <div id="opciones-contenedor" class="opciones-grid"></div>
+            <p id="feedback-trivia" class="feedback-texto"></p>
+        </div>
+        <button id="btn-continuar-8" class="oculto" onclick="cambiarPantalla(8, 9)">Continuar </button>
+    </section>
+
+<section id="pantalla-9" class="pantalla oculta">
+        <div class="tarjeta carta-larga">
+            <h2>Solo una cosa más...</h2>
+            
+            <p>No sé exactamente qué vaya a pasar entre nosotros en el futuro.</p>
+
+            <p>Pero sí sé que conocerte ha sido una de las cosas más bonitas que me han pasado.</p>
+            
+            <p>Desde el primer momento empezaste a ocupar un lugar muy especial en mi vida, y poco a poco cada conversación, cada risa y cada momento contigo se fueron convirtiendo en recuerdos que no quisiera perder.</p>
+            
+            <p>Hay días que parecen normales, pero cuando estoy contigo terminan siendo los mejores. Sin darte cuenta, haces que las cosas más simples tengan un significado diferente.</p>
+            
+            <p>Admiro tu forma de ser, tu naturalidad, la manera en que puedes alegrar un momento con solo existir. Son detalles que quizás para ti parezcan pequeños, pero para mí significan muchísimo.</p>
+            
+            <p>No sé qué nos espere más adelante, ni si el tiempo cambiará las cosas. Lo único que tengo claro es que todo lo que hemos vivido merece ser recordado.</p>
+            
+            <p>Por eso quise crear este pequeño rincón. Un lugar donde siempre quede guardado un pedacito de nuestra historia, de los momentos que compartimos y de todo lo bonito que has significado para mí.</p>
+            
+            <p>Y aunque el futuro sea incierto, espero que cuando vuelvas a leer estas palabras recuerdes que hubo alguien que puso tiempo, cariño y un pedacito de su corazón para hacerte sonreír.</p>
+            
+            <p>Gracias por existir, por ser tú y por regalarme tantos momentos que ahora forman parte de mis recuerdos favoritos.</p>
+            
+            <p>Este no es un final; es simplemente una forma de conservar todo lo bonito que hemos vivido hasta hoy. ❤️</p>
+
+            <button onclick="cambiarPantalla(9, 10)">Terminar</button>
+        </div>
+    </section>
+
+    <section id="pantalla-10" class="pantalla oculta">
+        <h2>Juli enserio que me estoy enamorando mucho de usted, hasta llegar al punto de amarla ❤️</h2>
+        <p style="margin-top: 10px;">Espero que esta pequeña sorpresa te haya sacado al menos una sonrisa.</p>
+        <button onclick="cambiarPantalla(10, 11)" style="margin-top: 30px;">Tengo una última sorpresa...</button>
+    </section>
+
+    <section id="pantalla-11" class="pantalla oculta">
+        <h2>Dale al botón para recibir un regalo </h2>
+        <div class="tarjeta">
+    
+            
+            <button id="btn-regalo" onclick="activarRegalo()">Abrir Regalo</button>
+            
+            <div id="cuenta-regresiva" class="oculto-elemento">
+                <div class="timer-caja">
+                    <div class="timer-numero" id="cd-dias">03</div>
+                    <span>Días</span>
+                </div>
+                <div class="timer-caja">
+                    <div class="timer-numero" id="cd-horas">00</div>
+                    <span>Horas</span>
+                </div>
+                <div class="timer-caja">
+                    <div class="timer-numero" id="cd-minutos">00</div>
+                    <span>Minutos</span>
+                </div>
+                <div class="timer-caja">
+                    <div class="timer-numero" id="cd-segundos">00</div>
+                    <span>Segundos</span>
+                </div>
+            </div>
+            <p id="mensaje-final" class="oculto-elemento" style="margin-top: 20px; font-weight: 600;">¡La espera valdrá la pena! ❤️</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
